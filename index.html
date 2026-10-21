@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mainee — Galeria de Arte</title>
+  <meta name="description"
+    content="Uma exposição digital íntima das pinturas de Mainee. Caminhe por um museu de silêncio, cor e emoção." />
+  <meta property="og:title" content="Mainee — Galeria de Arte" />
+  <meta property="og:description" content="Pinturas que falam em silêncio." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       CURSOR CUSTOM
+  ══════════════════════════════════════════════════ -->
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-follower" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-line"></div>
+      <span class="loader-text">Preparando a galeria&hellip;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Navegação principal">
+    <a href="#hero" class="nav-brand" aria-label="Início">Mainee</a>
+    <div class="nav-links">
+      <a href="#gallery" class="nav-link">Obras</a>
+      <a href="#immersion" class="nav-link">Imersão</a>
+      <a href="#about" class="nav-link">Artista</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════
+       HERO — TELA CHEIA
+  ══════════════════════════════════════════════════ -->
+  <section id="hero" aria-label="Entrada da galeria">
+    <div class="hero-bg" id="heroBg">
+      <img src="pinturas/IMG_1221.jpg" alt="Obra de destaque — Mainee" class="hero-img" id="heroImg" loading="eager" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content" id="heroContent">
+      <p class="hero-eyebrow" data-reveal>Exposição Digital</p>
+      <h1 class="hero-title" data-reveal>
+        <span class="line">Pinturas</span>
+        <span class="line italic">de Luz &amp; Silêncio</span>
+      </h1>
+      <p class="hero-artist" data-reveal>por <strong>Mainee</strong></p>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-line"></span>
+        <span class="scroll-label">Deslize para explorar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       INTRO STATEMENT
+  ══════════════════════════════════════════════════ -->
+  <section id="statement" aria-label="Declaração da exposição">
+    <div class="statement-inner">
+      <blockquote class="statement-quote" data-scroll-reveal>
+        <p>"Cada pincelada é uma palavra<br />que o silêncio aprendeu a dizer."</p>
+      </blockquote>
+      <p class="statement-body" data-scroll-reveal>
+        Bem-vindo a este espaço contemplativo. Não há pressa aqui. Deixe que cada obra encontre o seu olhar no seu
+        próprio ritmo.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       GALLERY — BENTO GRID ASSIMÉTRICO
+  ══════════════════════════════════════════════════ -->
+  <section id="gallery" aria-label="Hall de obras">
+    <div class="gallery-header" data-scroll-reveal>
+      <h2 class="gallery-title">Hall de Obras</h2>
+      <p class="gallery-subtitle">Dezasseis criações originais</p>
+    </div>
+
+    <div class="bento-grid" id="bentoGrid">
+
+      <!-- ROW 1 -->
+      <article class="bento-item bento-large" data-index="0" style="--delay:0s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1212.jpg" alt="Obra 1" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">01</span>
+          <span class="caption-title">Composição I</span>
+          <span class="caption-tech">Óleo sobre tela</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-portrait" data-index="1" style="--delay:0.1s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1213.jpg" alt="Obra 2" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">02</span>
+          <span class="caption-title">Estudo em Vermelho</span>
+          <span class="caption-tech">Acrílico</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-square" data-index="2" style="--delay:0.2s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1214.jpg" alt="Obra 3" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">03</span>
+          <span class="caption-title">Horizonte</span>
+          <span class="caption-tech">Técnica mista</span>
+        </div>
+      </article>
+
+      <!-- ROW 2 -->
+      <article class="bento-item bento-wide" data-index="3" style="--delay:0s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1215.jpg" alt="Obra 4" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">04</span>
+          <span class="caption-title">Forma &amp; Vazio</span>
+          <span class="caption-tech">Óleo</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-square" data-index="4" style="--delay:0.15s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1216.jpg" alt="Obra 5" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">05</span>
+          <span class="caption-title">Fragmentos</span>
+          <span class="caption-tech">Acrílico</span>
+        </div>
+      </article>
+
+      <!-- ROW 3 -->
+      <article class="bento-item bento-portrait" data-index="5" style="--delay:0.05s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1217.jpg" alt="Obra 6" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">06</span>
+          <span class="caption-title">Introspecção</span>
+          <span class="caption-tech">Óleo sobre tela</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-large" data-index="6" style="--delay:0.1s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1218.jpg" alt="Obra 7" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">07</span>
+          <span class="caption-title">Memória Viva</span>
+          <span class="caption-tech">Técnica mista</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-square" data-index="7" style="--delay:0.2s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1219.jpg" alt="Obra 8" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">08</span>
+          <span class="caption-title">Pulso</span>
+          <span class="caption-tech">Acrílico</span>
+        </div>
+      </article>
+
+      <!-- ROW 4 -->
+      <article class="bento-item bento-wide" data-index="8" style="--delay:0s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1220.jpg" alt="Obra 9" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">09</span>
+          <span class="caption-title">Vastidão</span>
+          <span class="caption-tech">Óleo</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-portrait" data-index="9" style="--delay:0.1s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1221.jpg" alt="Obra 10" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">10</span>
+          <span class="caption-title">Luminar</span>
+          <span class="caption-tech">Óleo sobre tela</span>
+        </div>
+      </article>
+
+      <!-- ROW 5 -->
+      <article class="bento-item bento-square" data-index="10" style="--delay:0s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1222.jpg" alt="Obra 11" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">11</span>
+          <span class="caption-title">Contorno</span>
+          <span class="caption-tech">Acrílico</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-large" data-index="11" style="--delay:0.1s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1223.jpg" alt="Obra 12" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">12</span>
+          <span class="caption-title">Ressonância</span>
+          <span class="caption-tech">Técnica mista</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-square" data-index="12" style="--delay:0.2s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1224.jpg" alt="Obra 13" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">13</span>
+          <span class="caption-title">Éter</span>
+          <span class="caption-tech">Óleo</span>
+        </div>
+      </article>
+
+      <!-- ROW 6 -->
+      <article class="bento-item bento-wide" data-index="13" style="--delay:0s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1225.jpg" alt="Obra 14" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">14</span>
+          <span class="caption-title">Deriva</span>
+          <span class="caption-tech">Acrílico</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-portrait" data-index="14" style="--delay:0.1s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1226.jpg" alt="Obra 15" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">15</span>
+          <span class="caption-title">Serenidade</span>
+          <span class="caption-tech">Óleo sobre tela</span>
+        </div>
+      </article>
+
+      <article class="bento-item bento-square" data-index="15" style="--delay:0.2s">
+        <div class="bento-img-wrap">
+          <img src="pinturas/IMG_1211.jpg" alt="Obra 16" loading="lazy" />
+        </div>
+        <div class="bento-caption">
+          <span class="caption-num">16</span>
+          <span class="caption-title">Origem</span>
+          <span class="caption-tech">Técnica mista</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       IMMERSION — SCROLLYTELLING
+  ══════════════════════════════════════════════════ -->
+  <section id="immersion" aria-label="Secção de imersão">
+    <div class="immersion-sticky-wrap">
+      <div class="immersion-sticky" id="immersionSticky">
+        <img src="pinturas/IMG_1219.jpg" alt="Obra em destaque — detalhe" class="immersion-bg-img"
+          id="immersionBgImg" />
+        <div class="immersion-overlay"></div>
+      </div>
+
+      <div class="immersion-steps">
+
+        <div class="immersion-step" data-step="0">
+          <div class="step-card">
+            <span class="step-num">I</span>
+            <h3 class="step-title">O Primeiro Olhar</h3>
+            <p class="step-text">Antes de compreender, sente. Deixe que a forma e a cor falem mais alto do que qualquer
+              explicação poderia.</p>
+          </div>
+        </div>
+
+        <div class="immersion-step" data-step="1">
+          <div class="step-card">
+            <span class="step-num">II</span>
+            <h3 class="step-title">A Textura do Tempo</h3>
+            <p class="step-text">Cada camada de tinta é um pensamento depositado com cuidado. O tempo do artista está
+              inscrito em cada pincelada.</p>
+          </div>
+        </div>
+
+        <div class="immersion-step" data-step="2">
+          <div class="step-card">
+            <span class="step-num">III</span>
+            <h3 class="step-title">Luz &amp; Sombra</h3>
+            <p class="step-text">A obra não existe sem o observador. É no espaço entre o que está pintado e o que é
+              imaginado que a arte vive.</p>
+          </div>
+        </div>
+
+        <div class="immersion-step" data-step="3">
+          <div class="step-card">
+            <span class="step-num">IV</span>
+            <h3 class="step-title">O Silêncio que Permanece</h3>
+            <p class="step-text">Quando fechar os olhos, o que ficará? Essa impressão, essa sensação que persiste — é a
+              marca de uma obra verdadeira.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       ABOUT — RODAPÉ DO ARTISTA
+  ══════════════════════════════════════════════════ -->
+  <footer id="about" aria-label="Sobre o artista">
+    <div class="about-inner">
+      <div class="about-portrait-wrap">
+        <div class="about-portrait-ring"></div>
+        <div class="about-portrait-img">
+          <img src="pinturas/artista.jpg" alt="Retrato do artista Mainee" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="about-text">
+        <span class="about-eyebrow">O Artista</span>
+        <h2 class="about-name">Mainee</h2>
+        <p class="about-bio">
+          Pintor autodidacta movido pela necessidade de traduzir o invisível em matéria. As suas obras transitam entre a
+          representação e a abstracção, sempre guiadas por uma sensibilidade particular à luz, ao espaço e ao silêncio
+          interior.
+        </p>
+        <p class="about-bio">
+          Cada tela é uma conversa que começa onde as palavras terminam.
+        </p>
+        <div class="about-links" aria-label="Contactos e redes sociais">
+          <a href="mailto:mainee@exemplo.com" class="about-link" aria-label="Enviar e-mail ao artista">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+            Enviar mensagem
+          </a>
+          <a href="#" class="about-link" aria-label="Instagram do artista">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Mainee. Todos os direitos reservados às obras.</p>
+      <p class="footer-made">Experiência concebida com amor e respeito pela arte.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════
+       LIGHTBOX MODAL
+  ══════════════════════════════════════════════════ -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização da obra" tabindex="-1">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <button class="lb-close" id="lbClose" aria-label="Fechar visualização">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <div class="lb-container">
+      <div class="lb-spotlight"></div>
+      <div class="lb-img-wrap" id="lbImgWrap">
+        <img src="" alt="" id="lbImg" class="lb-img" />
+      </div>
+      <div class="lb-info" id="lbInfo">
+        <span class="lb-num" id="lbNum"></span>
+        <h3 class="lb-title" id="lbTitle"></h3>
+        <span class="lb-tech" id="lbTech"></span>
+      </div>
+    </div>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Obra anterior">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <polyline points="15,18 9,12 15,6" />
+      </svg>
+    </button>
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Próxima obra">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        aria-hidden="true">
+        <polyline points="9,18 15,12 9,6" />
+      </svg>
+    </button>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+
+</html>
